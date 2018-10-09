@@ -1,6 +1,6 @@
 export const theme = {
   id: 'classic',
-  greenShade: '#89c144',
+  greenShade: '#2eb3ab',
   greyShade: '#3c3c3b',
-  blueShade: '#009fe3',
+  blueShade: '#002d42',
 }
