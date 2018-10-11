@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ThemeProvider, injectGlobal } from 'styled-components'
 import { theme } from '../helpers/theme'
 import { global } from '../helpers/styleHelper'
+import Header from './scenes/Header'
 import Hero from './scenes/Hero'
 import WhatWeDo from './scenes/WhatWeDo'
 import DNA from './scenes/DNA'
@@ -20,6 +21,7 @@ export default class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <div>
+          <Header/>
           <Hero/>
           <WhatWeDo/>
           <DNA/>

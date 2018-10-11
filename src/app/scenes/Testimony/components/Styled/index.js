@@ -4,8 +4,8 @@ import styled from 'styled-components'
 export const Wrapper = styled.div``
 
 export const Slide = styled.div`
-  height: 350px;
-  background-color: ${props => props.theme.blueShade};    
+  height: 400px;
+  background-color: ${props => props.customBackground};    
   text-align: center;  
   color: white;  
 `
@@ -13,23 +13,27 @@ export const Slide = styled.div`
 export const SlideContent = styled.div`  
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+  height: 400px;
 
   .title {
-    padding: 20px 0;
-    font-size: 24px;
+    padding: 40px 0;
+    font-size: 30px;
+    font-weight: 900;
   }
 
   .content {
     font-style: italic;
     line-height: 1.6;
-    width: 300px;
-    padding: 10px 0;
+    width: 500px;    
   }
 
   .author {
     font-style: italic;
+    font-size: 14px;
+    padding: 40px;
+    font-weight: 900;
   }
 `
 
@@ -42,7 +46,7 @@ export const Dots = styled.ul`
   margin: 0;
 
   .active {
-    background-color: #323232;
+    background-color: white;
   }
   
   > div {
@@ -51,8 +55,8 @@ export const Dots = styled.ul`
     position: absolute;
     top: -50px;
 
-    > li {
-      background-color: white;
+    > li {      
+      background-color: ${props => props.backgroundColor === 'green' ? "#248f88" : "#325667"};
       height: 10px;
       width: 10px;
       border-radius: 50%;

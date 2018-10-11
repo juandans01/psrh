@@ -3,7 +3,7 @@ import ContactLeft from '../../../../../assets/contact-left.png'
 import ContactRight from '../../../../../assets/contact-right.png'
 
 export const Wrapper = styled.div`
-  height: 400px;
+  height: 600px;
   position: relative;
 `
 

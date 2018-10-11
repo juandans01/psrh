@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
 import { Wrapper, Slide, Dots, SlideContent } from './components/Styled'
 import Slider from 'react-slick'
+import { withTheme } from 'styled-components';
 
 
-export default class Testimony extends Component {
+class Testimony extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      active: '0'
+      active: '0',
+      background: 'green'
     }
   }
   goToSlide = (index) => {
     this.setState({
-      active: '' + index
+      active: '' + index,
     })    
     this.slider.slickPause()
     this.slider.slickGoTo(index)
@@ -21,29 +23,35 @@ export default class Testimony extends Component {
   }
 
   beforeSlideChange = (oldIndex, newIndex) => {    
+
     this.setState({
-      active: '' + newIndex
+      active: '' + newIndex,
+      background: this.state.background === 'green' ? 'blue' : 'green'
     })
   }
 
+  
   render(){
+    console.log(this.props.theme.greenShade)
     const settings = {
       arrows: false,
       infinite: true,      
       slidesToShow:  1,
       slidesToScroll: 1,
-      // autoplay: true,
+      autoplay: true,
       speed: 1000,
       autoplaySpeed: 12000,
-      beforeChange: this.beforeSlideChange   
+      beforeChange: this.beforeSlideChange,
     }
     return(
       <Wrapper>
         <Slider ref={slider => (this.slider = slider)} {...settings}>
-          <Slide>
+          <Slide
+            customBackground={this.props.theme.greenShade}
+          >
             <SlideContent>
               <div className="title">
-                TESTIMONIO
+                TESTIMONIOS
               </div>
               <div className='content'>
                 Creemos en la relación con el cliente, más allá de cubrir
@@ -57,10 +65,12 @@ export default class Testimony extends Component {
               </div>
             </SlideContent>            
           </Slide>
-          <Slide>
+          <Slide
+            customBackground={this.props.theme.blueShade}
+          >
             <SlideContent>
               <div className="title">
-                TESTIMONIO
+                TESTIMONIOS
               </div>
               <div className='content'>
                 Creemos en la relación con el cliente, más allá de cubrir
@@ -74,10 +84,12 @@ export default class Testimony extends Component {
               </div>
             </SlideContent>            
           </Slide>
-          <Slide>
+          <Slide
+            customBackground={this.props.theme.greenShade}
+          >
             <SlideContent>
               <div className="title">
-                TESTIMONIO
+                TESTIMONIOS
               </div>
               <div className='content'>
                 Creemos en la relación con el cliente, más allá de cubrir
@@ -92,7 +104,9 @@ export default class Testimony extends Component {
             </SlideContent>
           </Slide>
         </Slider>
-        <Dots>
+        <Dots
+          backgroundColor={this.state.background}
+        >
           <div>
             <li className={this.state.active === '0' ? 'active' : ''} onClick={() => {this.goToSlide(0)}}></li>
             <li className={this.state.active === '1' ? 'active' : ''} onClick={() => {this.goToSlide(1)}}></li>
@@ -103,3 +117,6 @@ export default class Testimony extends Component {
     )
   }
 }
+
+
+export default withTheme(Testimony)

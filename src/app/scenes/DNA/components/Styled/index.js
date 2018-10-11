@@ -47,5 +47,6 @@ export const Item = styled.div`
   > p {
     text-align: center;
     font-size: 14px;
+    line-height: 1.4;
   }  
 `

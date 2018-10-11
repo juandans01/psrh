@@ -10,19 +10,13 @@ export const Title = styled.div`
   font-family: 'Montserrat';
   font-size: ${props => props.fontSize ? props.fontSize : "65px"};
   font-style: ${props => props.fontStyle ? props.fontStyle : "normal"}
-  color: ${props => props.fontColor ? props.fontColor : props.theme.greyShade};
+  color: ${props => props.fontColor ? props.fontColor : props.theme.greenShade};
   font-weight: 700;
-  border-bottom: 3px solid ${props => props.theme.blueShade}
-`
-
-export const LineSeparator = styled.div`
-  margin-top: 10px;
-  height: 3px;
-  background-color: ${props => props.theme.blueShade};
+  border-bottom: 3px solid ${props => props.borderColor}
 `
 
 export const BigSeparator = styled.div`
   height: 3px;
   width: 100px;
-  background-color: ${props => props.theme.blueShade};
+  background-color: ${props => props.borderColor};
 `

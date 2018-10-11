@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Wrapper, Differences, Target } from './components/Styled'
+import { withTheme } from 'styled-components'
 import Box from '../../components/Box'
 
 import Difference1 from '../../../assets/difference1.svg'
 import Difference2 from '../../../assets/difference2.svg'
 import Difference3 from '../../../assets/difference3.svg'
 
-export default class Difference extends Component {
+class Difference extends Component {
 
   render(){
     return(
@@ -76,12 +77,22 @@ export default class Difference extends Component {
           <div className='image'></div>
           <div className='content'>
             <Box
-              textFontColor="white"              
-              title="NUESTRO DIFERENCIAL"
+              fontColor="white"
+              borderColor={this.props.theme.greenShade} 
+              title="OBJETIVO"
             />
+            <p>
+              Creemos en la relación con el cliente, más allá de cubrir
+              búsquedas encontrando y seleccionando a las personas
+              indicadas, nos orientamos a ser partners en sus procesos
+              de selección, pudiendo asistir y proporcionar las mejores
+              prácticas para cumplir con los objetivos establecidos.
+            </p>
           </div>
         </Target>
       </Wrapper>
     )
   }
 }
+
+export default withTheme(Difference)

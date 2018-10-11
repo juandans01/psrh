@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import TargetImage from '../../../../../assets/target.png'
+import DifferenceBackground from '../../../../../assets/difference-background.svg'
 
 export const Wrapper = styled.div`
   margin-top: 50px;
@@ -7,6 +8,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url(${DifferenceBackground}) no-repeat 50% 100% / auto;
 `
 
 export const Differences = styled.div`
@@ -29,6 +31,10 @@ export const Differences = styled.div`
       font-weight: 900;
       color: ${props => props.theme.greenShade};
     }
+
+    > p {
+      line-height: 1.4;
+    }
   }
 `
 
@@ -36,7 +42,7 @@ export const Target = styled.div`
   margin-top: 50px;
   height: 500px;
   position: relative;
-  width: 100%;
+  width: 900px;
 
   .image {
     position: absolute;
@@ -49,6 +55,18 @@ export const Target = styled.div`
   }
 
   .content {
-    right: 0;   
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: 2;
+    background-color: ${props => props.theme.blueShade};
+    padding: 50px 100px 50px 50px;
+
+    > p {
+      margin-top: 10px
+      line-height: 1.4;
+      color: white;
+      width: 500px;
+    }
   }
 `
