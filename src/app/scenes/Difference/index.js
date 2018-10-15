@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import { Wrapper, Differences, Target } from './components/Styled'
 import { withTheme } from 'styled-components'
+import AnimatedCircle from '../../components/AnimatedCircle'
 import Box from '../../components/Box'
 
 import Difference1 from '../../../assets/difference1.svg'
 import Difference2 from '../../../assets/difference2.svg'
 import Difference3 from '../../../assets/difference3.svg'
+
+// import Animation from '../../../assets/animate.svg'
+
 
 class Difference extends Component {
 
@@ -21,9 +25,24 @@ class Difference extends Component {
           <div>
             <div className='image'>
               <img
+                className='icon'
                 src={Difference1}
                 alt='difference1'
               />
+              <div
+                className='first-animation'
+              >
+                <AnimatedCircle
+                  className='big-circle'
+                  initialPose='none'
+                  pose='attention'
+                />
+                <AnimatedCircle
+                  className='small-circle'
+                  initialPose='none'
+                  pose='attention'
+                />
+              </div>
             </div>            
             <p className='number'>01</p>
             <p>
@@ -39,9 +58,24 @@ class Difference extends Component {
           <div>
             <div className='image'>
               <img
+                className='icon'
                 src={Difference2}
                 alt='difference2'
               />
+              <div
+                className='second-animation'
+              >
+                <AnimatedCircle
+                  className='small-circle'
+                  initialPose='none'
+                  pose='attention'
+                />
+                <AnimatedCircle
+                  className='small-circle'
+                  initialPose='none'
+                  pose='attention'
+                />
+              </div>
             </div>            
             <p className='number'>02</p>
             <p>
@@ -57,9 +91,24 @@ class Difference extends Component {
           <div>
             <div className='image'>
               <img
+                className='icon'
                 src={Difference3}
                 alt='difference3'
               />
+              <div
+                className='first-animation'
+              >
+                <AnimatedCircle
+                  className='big-circle'
+                  initialPose='none'
+                  pose='attention'
+                />
+                <AnimatedCircle
+                  className='small-circle'
+                  initialPose='none'
+                  pose='attention'
+                />
+              </div>
             </div>            
             <p className='number'>03</p>
             <p>

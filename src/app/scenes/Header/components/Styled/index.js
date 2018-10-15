@@ -2,24 +2,22 @@ import styled from 'styled-components'
 import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
-  z-index: 3;
+  z-index: 5;
   position: fixed; /* Set the navbar to fixed position */
   top: 0;
   width: 100%;
   height: 90px;
-  background-color: ${props => props.theme.greenShade};
-  display: flex;
+  background: linear-gradient(to right top, #00c2be, #71d8bf);
+  display: ${props => props.visible ? "flex" : "none"};
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ececec;
 `
 
 export const Title = styled.div`  
   margin-left: 60px;
   > img {
-    width: 200px;
-    height: 200px;
-    margin-top: 8px;
+    width: 260px;
+    margin-top: 5px;
   }
 
   ${bp('ts')`

@@ -9,7 +9,8 @@ class Header extends Component {
   constructor(props){
     super(props)
     this.state = {
-      navMobileVisible: false
+      navMobileVisible: false,
+      visible: false
     }
   }
 
@@ -25,28 +26,51 @@ class Header extends Component {
     })
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.onWindowScroll)
+  }
+
+  onWindowScroll = () => {    
+    console.log(window.pageYOffset)
+    if(window.pageYOffset > 630 && !this.state.visible) {
+      this.setState({
+        visible: true
+      })
+    }
+
+    if(window.pageYOffset < 630 && this.state.visible) {
+      this.setState({
+        visible: false
+      })
+    }
+  }
+
   render() {
     return (
-      <Wrapper>
-        <Title>
-          <img src={Logo} alt='logo'/>
-        </Title>
-        <Menu className={this.state.navMobileVisible ? 'mobile-visible' : null}>
-            <div onClick={() => {scrollTo('culture', -70)}}>Home</div>
-            <div onClick={() => {scrollTo('solutions', -70)}}>Como trabajamos</div>
-            <div onClick={() => {scrollTo('clients', -100)}}>Contacto</div>            
-          </Menu>        
-        <MobileMenu onClick={this.onMenuIconClick}>
-          <button type='button'>
-            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 139 139'>
-              <path d='M26.5 46.3h86' />
-              <path d='M26.5 92.7h86' />
-              <path d='M26.5 69.5h86' />
-              <path d='M26.5 69.5h86' />
-            </svg>
-          </button>
-        </MobileMenu>
-      </Wrapper>
+      <div>
+        <Wrapper
+          visible={this.state.visible}
+        >
+            <Title>
+              <img src={Logo} alt='logo'/>
+            </Title>
+            <Menu className={this.state.navMobileVisible ? 'mobile-visible' : null}>
+                <div onClick={() => {scrollTo('culture', -70)}}>Home</div>
+                <div onClick={() => {scrollTo('solutions', -70)}}>Como trabajamos</div>
+                <div onClick={() => {scrollTo('clients', -100)}}>Contacto</div>            
+              </Menu>        
+            <MobileMenu onClick={this.onMenuIconClick}>
+              <button type='button'>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 139 139'>
+                  <path d='M26.5 46.3h86' />
+                  <path d='M26.5 92.7h86' />
+                  <path d='M26.5 69.5h86' />
+                  <path d='M26.5 69.5h86' />
+                </svg>
+              </button>
+            </MobileMenu>
+          </Wrapper>        
+      </div>      
     )
   }
 }

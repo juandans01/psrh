@@ -11,11 +11,33 @@ export const Slide = styled.div`
 `
 
 export const SlideContent = styled.div`  
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   height: 400px;
+
+  .content-wrapper {
+    position: relative
+  }
+
+
+  .up {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: -150px;
+  }
+
+  .low {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: -50px;
+    right: -130px;
+  }
 
   .title {
     padding: 40px 0;

@@ -24,8 +24,41 @@ export const Differences = styled.div`
     .image {
       display: flex;
       justify-content: center;
-      align-items: center;      
+      align-items: center;
+      position: relative;
     }
+
+    .icon {
+      z-index: 2;
+    }
+
+    .first-animation {
+      position: absolute;      
+    }
+
+    .second-animation {
+      position: absolute;
+    }
+
+    .third-animation {
+      position: absolute;
+    }
+
+
+    .big-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: ${props => props.theme.greenShade};
+    }
+
+    .small-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: ${props => props.theme.greenShade};
+    }
+
 
     .number {
       font-weight: 900;

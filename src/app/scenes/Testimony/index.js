@@ -3,6 +3,11 @@ import { Wrapper, Slide, Dots, SlideContent } from './components/Styled'
 import Slider from 'react-slick'
 import { withTheme } from 'styled-components';
 
+import GreenUp from '../../../assets/test-green-up.svg'
+import GreenLow from '../../../assets/test-green-low.svg'
+
+import BlueUp from '../../../assets/test-blue-up.svg'
+import BlueLow from '../../../assets/test-blue-low.svg'
 
 class Testimony extends Component {
 
@@ -49,57 +54,93 @@ class Testimony extends Component {
           <Slide
             customBackground={this.props.theme.greenShade}
           >
-            <SlideContent>
-              <div className="title">
-                TESTIMONIOS
-              </div>
-              <div className='content'>
-                Creemos en la relación con el cliente, más allá de cubrir
-                búsquedas encontrando y seleccionando a las personas
-                indicadas, nos orientamos a ser partners en sus procesos
-                de selección, pudiendo asistir y proporcionar las mejores
-                prácticas para cumplir con los objetivos establecidos.
-              </div>
-              <div className='author'>
-                Dolores Canónico - Talent Accquisition Specialist - Iúnigo
-              </div>
+            <SlideContent>                            
+              <div className='content-wrapper'>
+                <img
+                  className='up'
+                  src={GreenUp}
+                  alt='green-up'
+                />
+                <div className="title">
+                  TESTIMONIOS
+                </div>
+                <div className='content'>
+                  Creemos en la relación con el cliente, más allá de cubrir
+                  búsquedas encontrando y seleccionando a las personas
+                  indicadas, nos orientamos a ser partners en sus procesos
+                  de selección, pudiendo asistir y proporcionar las mejores
+                  prácticas para cumplir con los objetivos establecidos.
+                </div>
+                <div className='author'>
+                  Dolores Canónico - Talent Accquisition Specialist - Iúnigo
+                </div>
+                <img
+                  className='low'
+                  src={GreenLow}
+                  alt='green-low'
+                />
+              </div>                        
             </SlideContent>            
           </Slide>
           <Slide
             customBackground={this.props.theme.blueShade}
           >
             <SlideContent>
-              <div className="title">
-                TESTIMONIOS
-              </div>
-              <div className='content'>
-                Creemos en la relación con el cliente, más allá de cubrir
-                búsquedas encontrando y seleccionando a las personas
-                indicadas, nos orientamos a ser partners en sus procesos
-                de selección, pudiendo asistir y proporcionar las mejores
-                prácticas para cumplir con los objetivos establecidos.
-              </div>
-              <div className='author'>
-                Dolores Canónico - Talent Accquisition Specialist - Iúnigo
-              </div>
+              <div className='content-wrapper'>
+                <img
+                  className='up'
+                  src={BlueUp}
+                  alt='blue-up'
+                />
+                <div className="title">
+                  TESTIMONIOS
+                </div>
+                <div className='content'>
+                  Creemos en la relación con el cliente, más allá de cubrir
+                  búsquedas encontrando y seleccionando a las personas
+                  indicadas, nos orientamos a ser partners en sus procesos
+                  de selección, pudiendo asistir y proporcionar las mejores
+                  prácticas para cumplir con los objetivos establecidos.
+                </div>
+                <div className='author'>
+                  Dolores Canónico - Talent Accquisition Specialist - Iúnigo
+                </div>
+                <img
+                  className='low'
+                  src={BlueLow}
+                  alt='blue-low'
+                />
+              </div>              
             </SlideContent>            
           </Slide>
           <Slide
             customBackground={this.props.theme.greenShade}
           >
             <SlideContent>
-              <div className="title">
-                TESTIMONIOS
-              </div>
-              <div className='content'>
-                Creemos en la relación con el cliente, más allá de cubrir
-                búsquedas encontrando y seleccionando a las personas
-                indicadas, nos orientamos a ser partners en sus procesos
-                de selección, pudiendo asistir y proporcionar las mejores
-                prácticas para cumplir con los objetivos establecidos.
-              </div>
-              <div className='author'>
-                Dolores Canónico - Talent Accquisition Specialist - Iúnigo
+              <div className='content-wrapper'>
+                <img
+                  className='up'
+                  src={GreenUp}
+                  alt='green-up'
+                />
+                <div className="title">
+                  TESTIMONIOS
+                </div>
+                <div className='content'>
+                  Creemos en la relación con el cliente, más allá de cubrir
+                  búsquedas encontrando y seleccionando a las personas
+                  indicadas, nos orientamos a ser partners en sus procesos
+                  de selección, pudiendo asistir y proporcionar las mejores
+                  prácticas para cumplir con los objetivos establecidos.
+                </div>
+                <div className='author'>
+                  Dolores Canónico - Talent Accquisition Specialist - Iúnigo
+                </div>
+                <img
+                  className='low'
+                  src={GreenLow}
+                  alt='green-low'
+                />
               </div>
             </SlideContent>
           </Slide>
