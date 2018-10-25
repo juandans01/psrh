@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import TargetImage from '../../../../../assets/target.png'
 import DifferenceBackground from '../../../../../assets/difference-background.svg'
+import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
   margin-top: 50px;
@@ -14,8 +15,13 @@ export const Wrapper = styled.div`
 export const Differences = styled.div`
   margin-top: 50px;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
+  flex-direction: row;
   padding: 30px;
+  ${bp('ts')`
+    flex-direction: column;
+    padding: 0;
+  `}
   > div {
     width: 200px;
     padding: 50px;
@@ -33,15 +39,24 @@ export const Differences = styled.div`
     }
 
     .first-animation {
-      position: absolute;      
+      position: absolute;
+      > div{ 
+        margin: 15px;
+      }
     }
 
     .second-animation {
       position: absolute;
+      > div{ 
+        margin: 15px;
+      }
     }
 
     .third-animation {
       position: absolute;
+      > div{ 
+        margin: 15px;
+      }
     }
 
 
@@ -75,7 +90,7 @@ export const Target = styled.div`
   margin-top: 50px;
   height: 500px;
   position: relative;
-  width: 900px;
+  width: 100%;
 
   .image {
     position: absolute;
@@ -83,8 +98,11 @@ export const Target = styled.div`
     top: 0;
     left: 0;
     height: 500px;
-    width: 400px;
+    width: 600px;
     background: url(${TargetImage}) no-repeat 50% 50% / cover;
+    ${bp('ts')`
+      display: none;
+    `}
   }
 
   .content {
@@ -94,12 +112,23 @@ export const Target = styled.div`
     z-index: 2;
     background-color: ${props => props.theme.blueShade};
     padding: 50px 100px 50px 50px;
+    ${bp('ts')`
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 50px 0;
+    `}    
 
     > p {
       margin-top: 10px
       line-height: 1.4;
       color: white;
       width: 500px;
+
+      ${bp('ts')`
+        width: auto;
+        padding: 0 10px;
+      `}
     }
   }
 `

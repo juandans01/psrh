@@ -1,8 +1,11 @@
 import styled from 'styled-components'
-
+import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
   height: 200px;
+  ${bp('md')`
+    height: auto;
+  `}
   width: 100%;
   background: linear-gradient(to right, ${props => props.theme.blueShade}, ${props => props.theme.greenShade});  
 `
@@ -12,7 +15,7 @@ export const Logo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  align-items: flex-start;  
   > img {
     height: 150px;
     width: 300px;

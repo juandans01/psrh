@@ -18,6 +18,7 @@ export default class Contact extends Component {
   onLeftShowClick = () => {
     this.setState({
       leftAsked: true,
+      rightAsked: false,
       leftZIndex: '4',
       rightZIndex: '2'
     })
@@ -31,9 +32,9 @@ export default class Contact extends Component {
   }
 
   onRightShowClick = () => {
-    console.log('gere')
     this.setState({
       rightAsked: true,
+      leftAsked: false,
       rightZIndex: '4',
       leftZIndex: '2'
     })
@@ -49,6 +50,7 @@ export default class Contact extends Component {
   render(){
     return(
       <Wrapper>
+        <div>
         <LeftForm>
           <div>
             <h2>Completá el siguiente formulario:</h2>
@@ -83,6 +85,8 @@ export default class Contact extends Component {
             <h2>¿Buscás<br/> un cambio?</h2>
             <button onClick={this.onLeftShowClick}>Dejanos tus datos acá</button>
         </LeftQuestion>
+        </div>        
+        <div>
         <RightForm>
           <div>
             <h2>Completá el siguiente formulario:</h2>
@@ -113,6 +117,7 @@ export default class Contact extends Component {
           <h2>¿Buscás<br/> un partner?</h2>
           <button onClick={this.onRightShowClick}>Dejanos tus datos acá</button>
         </RightQuestion>
+        </div>        
       </Wrapper>
     )
   }

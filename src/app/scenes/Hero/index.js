@@ -25,7 +25,7 @@ export default class Hero extends Component {
     return (
       <Wrapper>
         <BackWrapper>
-        <MenuWrapper>
+          <MenuWrapper>
               <MenuTitle>
                 <img src={Logo} alt='logo'/>
               </MenuTitle>
@@ -44,7 +44,7 @@ export default class Hero extends Component {
                   </svg>
                 </button>
               </MobileMenu>
-            </MenuWrapper>
+          </MenuWrapper>
           <Left>
             <Title
               fontSize="50px"

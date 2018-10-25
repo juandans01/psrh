@@ -10,7 +10,7 @@ export default class Footer extends Component {
     return(
       <div className='pure-g'>
         <Wrapper>
-          <div className='pure-u-1-2'>
+          <div className='pure-u-1-2 pure-u-md-1'>
             <Logo>
               <img
                 src={LogoFooter}
@@ -18,7 +18,7 @@ export default class Footer extends Component {
               />
             </Logo>
           </div>
-          <div className='pure-u-1-2'>
+          <div className='pure-u-1-2 pure-u-md-1'>
             <Info>
               <div className='email'>
                 contacto@growinghr.com

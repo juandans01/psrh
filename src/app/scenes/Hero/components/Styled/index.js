@@ -13,12 +13,25 @@ export const BackWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(to right top, #00c2be, #71d8bf);  
+  background: linear-gradient(to right top, #00c2be, #71d8bf);
+  ${bp('ts')`
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 800px;
+  `}
 `
 
 export const Left = styled.div`
   width: 400px;
+  ${bp('ts')`
+    width: auto;
+    padding: 20px;
 
+    > div {
+      font-size: 36px;
+    }
+  `}
   > p {
     line-height: 1.4;
   }
@@ -35,8 +48,10 @@ export const Right = styled.div`
 export const Dots = styled.img`
   z-index: 1;
   position: absolute;
-  height: 500px;
-  width: 500px;
+  ${bp('ts')`
+    height: 500px;
+  `}
+  height: 700px;
   right: -100px;
   bottom: 0px;
 `

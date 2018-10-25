@@ -1,10 +1,13 @@
 import styled from 'styled-components'
-// import { bp } from '../../../../../helpers/styleHelper'
+import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div``
 
 export const Slide = styled.div`
   height: 400px;
+  ${bp('ts')`
+    height: 450px;
+  `}
   background-color: ${props => props.customBackground};    
   text-align: center;  
   color: white;  
@@ -29,6 +32,9 @@ export const SlideContent = styled.div`
     position: absolute;
     top: 0;
     left: -150px;
+    ${bp('ts')`
+      display: none;
+    `}
   }
 
   .low {
@@ -37,6 +43,9 @@ export const SlideContent = styled.div`
     position: absolute;
     bottom: -50px;
     right: -130px;
+    ${bp('ts')`
+      display: none;
+    `}
   }
 
   .title {
@@ -48,7 +57,11 @@ export const SlideContent = styled.div`
   .content {
     font-style: italic;
     line-height: 1.6;
-    width: 500px;    
+    width: 500px;
+    ${bp('ts')`
+      width: auto;
+      padding: 0 25px;
+    `}
   }
 
   .author {

@@ -1,11 +1,18 @@
 import styled from 'styled-components'
-
+import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
   height: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   margin: 30px 0;
+
+  ${bp('md')`
+    flex-direction: column;
+    height: 700px;
+  `}
 `
 
 export const Profile = styled.div`

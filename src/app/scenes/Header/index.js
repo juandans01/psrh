@@ -31,7 +31,6 @@ class Header extends Component {
   }
 
   onWindowScroll = () => {    
-    console.log(window.pageYOffset)
     if(window.pageYOffset > 630 && !this.state.visible) {
       this.setState({
         visible: true

@@ -22,7 +22,14 @@ export default class DNA extends Component {
         <Items>
             <div>
               <Item>
-                <img src={Chatting} alt='chatting'/>
+                <div className='image-wrapper'>
+                  <img src={Chatting} alt='chatting'/>
+                  <div className='circles-1'>
+                    <div></div>
+                    <p></p>
+                  </div>
+                </div>
+                
                 <div>Orientados al cliente</div>
                 <p>
                   Trabajamos teniendo reuniones
@@ -33,7 +40,13 @@ export default class DNA extends Component {
             </div>
             <div>
               <Item>
-                <img src={Accurate} alt='chatting'/>
+                <div className='image-wrapper'>
+                  <img src={Accurate} alt='chatting'/>
+                  <div className='circles-2'>
+                    <div></div>
+                    <p></p>
+                  </div>
+                </div>                
                 <div>Certeros</div>
                 <p>
                   Trabajamos constantemente en
@@ -43,7 +56,13 @@ export default class DNA extends Component {
               </Item>
               <div className='second'></div>
               <Item>
-                <img src={Engaged} alt='chatting'/>
+                <div className='image-wrapper'>
+                  <img src={Engaged} alt='chatting'/>
+                  <div className='circles-3'>
+                    <div></div>
+                    <p></p>
+                  </div>
+                </div>                
                 <div>Comprometidos</div>
                 <p>
                   Cada búsqueda que trabajamos
@@ -54,7 +73,13 @@ export default class DNA extends Component {
             </div>
             <div>
               <Item>
-                <img src={Agile} alt='chatting'/>
+                <div className='image-wrapper'>
+                  <img src={Agile} alt='chatting'/>
+                  <div className='circles-1'>
+                    <div></div>
+                    <p></p>
+                  </div>
+                </div>                       
                 <div>Ágiles</div>
                 <p>
                   Buscamos trabajar de manera
@@ -66,7 +91,13 @@ export default class DNA extends Component {
               </Item>
               <div className='third'></div>
               <Item>
-                <img src={Flexible} alt='chatting'/>
+                <div className='image-wrapper'>
+                  <img src={Flexible} alt='chatting'/>
+                  <div className='circles-2'>
+                    <div></div>
+                    <p></p>
+                  </div>
+                </div>                        
                 <div>Flexibles</div>
                 <p>
                   Somos dinámicos, nos adapta-

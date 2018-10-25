@@ -1,10 +1,28 @@
 import styled from 'styled-components'
 import ContactLeft from '../../../../../assets/contact-left.png'
 import ContactRight from '../../../../../assets/contact-right.png'
+import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
   height: 600px;
   position: relative;
+
+  ${bp('ts')`
+      display: flex;
+      flex-direction: column;
+      height: 700px;
+  `}
+
+  > div {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+
+    ${bp('ts', 'min-width')`
+      position: absolute;      
+    `}
+  }
 `
 
 export const LeftForm = styled.form`
@@ -14,6 +32,9 @@ export const LeftForm = styled.form`
   height: 100%;
   background: white;
   width: 50%;
+  ${bp('ts')`
+    width: 100%;
+  `}
   z-index: 1;
 
   display: flex;
@@ -28,6 +49,10 @@ export const LeftForm = styled.form`
       color: ${props => props.theme.greenShade};
     }
     > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       > input {        
         -webkit-appearance: none;
         border: none;
@@ -74,13 +99,21 @@ export const LeftQuestion = styled.div`
 
   position: absolute;
   top: 0;    
-  left: ${props => props.asked ? '50%' : '0'};
 
   height: 100%;
-  background: url(${ContactLeft}) no-repeat 50% 50% / cover;
-  width: 50%;
+  background: url(${ContactLeft}) no-repeat 50% 50% / cover;  
   z-index: ${props => props.leftIndex};
 
+  width: 50%;
+  ${bp('ts')`
+    width: 100%;
+    left: ${props => props.asked ? '100%' : '0'};
+  `}
+
+  ${bp('ts', 'min-width')`
+    width: 50%;
+    left: ${props => props.asked ? '50%' : '0'};
+  `}
 
   display: flex;
   flex-direction: column;
@@ -126,6 +159,9 @@ export const RightForm = styled.form`
   height: 100%;
   background: white;
   width: 50%;
+  ${bp('ts')`
+    width: 100%;
+  `}
   z-index: 1;
 
   display: flex;
@@ -140,6 +176,10 @@ export const RightForm = styled.form`
       color: ${props => props.theme.blueShade};
     }
     > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       > input {        
         -webkit-appearance: none;
         border: none;
@@ -174,12 +214,21 @@ export const RightQuestion = styled.div`
   transition-duration: 1s;  
 
   position: absolute;
-  top: 0;    
-  right: ${props => props.asked ? '50%' : '0'};
-
+  top: 0;
   height: 100%;
   background: url(${ContactRight}) no-repeat 50% 50% / cover;
+  
   width: 50%;
+  ${bp('ts')`
+    width: 100%;
+    right: ${props => props.asked ? '100%' : '0'};
+  `}
+
+  ${bp('ts', 'min-width')`
+    width: 50%;
+    right: ${props => props.asked ? '50%' : '0'};
+  `}
+
   z-index: ${props => props.rightIndex};
 
 
@@ -208,7 +257,7 @@ export const RightQuestion = styled.div`
 `
 
 export const RightArrow = styled.div`
-  
+
   visibility: ${props => props.asked ? 'visible' : 'hidden'};
   opacity: ${props => props.asked ? '1' : '0'};
   transition: visibility 0s linear 0.5s,opacity 0.5s linear;

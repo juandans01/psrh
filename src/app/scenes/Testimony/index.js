@@ -37,13 +37,12 @@ class Testimony extends Component {
 
   
   render(){
-    console.log(this.props.theme.greenShade)
     const settings = {
       arrows: false,
       infinite: true,      
       slidesToShow:  1,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       speed: 1000,
       autoplaySpeed: 12000,
       beforeChange: this.beforeSlideChange,

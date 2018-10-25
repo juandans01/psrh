@@ -1,7 +1,12 @@
 import styled from 'styled-components'
+import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
   width: ${props => props.boxWidth};
+  ${bp('ts')`
+    width: auto;
+    padding: 10px;
+  `}
 `
 
 export const Title = styled.div`
