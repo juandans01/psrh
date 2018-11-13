@@ -54,9 +54,9 @@ class Header extends Component {
               <img src={Logo} alt='logo'/>
             </Title>
             <Menu className={this.state.navMobileVisible ? 'mobile-visible' : null}>
-                <div onClick={() => {scrollTo('culture', -70)}}>Home</div>
-                <div onClick={() => {scrollTo('solutions', -70)}}>Como trabajamos</div>
-                <div onClick={() => {scrollTo('clients', -100)}}>Contacto</div>            
+                <div onClick={() => {scrollTo('hero', -70)}}>Home</div>
+                <div onClick={() => {scrollTo('dna', -70)}}>Como trabajamos</div>
+                <div onClick={() => {scrollTo('contact', -100)}}>Contacto</div>            
               </Menu>        
             <MobileMenu onClick={this.onMenuIconClick}>
               <button type='button'>

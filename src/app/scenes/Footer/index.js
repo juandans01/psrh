@@ -28,10 +28,12 @@ export default class Footer extends Component {
                 Ciudad de Buenos Aires, Argentina
               </div>
               <div className='link'>
-                <img
-                  src={LinkedinLight}
-                  alt='linkedin-light'
-                />
+                <a href='https://www.linkedin.com/company/growinghr' target='_blank' rel="noopener noreferrer">
+                  <img
+                    src={LinkedinLight}
+                    alt='linkedin-light'
+                  />
+                </a>                  
               </div>
             </Info>
           </div>                 

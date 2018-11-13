@@ -12,7 +12,7 @@ export default class DNA extends Component {
 
   render(){
     return(
-      <Wrapper>
+      <Wrapper id='dna'>
         <BoxWrapper>
           <Box
             title="ADN Growing"

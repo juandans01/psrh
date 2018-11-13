@@ -25,7 +25,7 @@ export const Differences = styled.div`
   > div {
     width: 200px;
     padding: 50px;
-    border: 2px solid ${props => props.theme.blueShade};
+    border: 1px solid ${props => props.theme.blueShade};
 
     .image {
       display: flex;

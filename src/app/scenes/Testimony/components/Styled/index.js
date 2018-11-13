@@ -4,9 +4,9 @@ import { bp } from '../../../../../helpers/styleHelper'
 export const Wrapper = styled.div``
 
 export const Slide = styled.div`
-  height: 400px;
+  height: 430px;
   ${bp('ts')`
-    height: 450px;
+    height: 480px;
   `}
   background-color: ${props => props.customBackground};    
   text-align: center;  

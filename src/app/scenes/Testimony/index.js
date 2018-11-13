@@ -64,11 +64,7 @@ class Testimony extends Component {
                   TESTIMONIOS
                 </div>
                 <div className='content'>
-                  Creemos en la relación con el cliente, más allá de cubrir
-                  búsquedas encontrando y seleccionando a las personas
-                  indicadas, nos orientamos a ser partners en sus procesos
-                  de selección, pudiendo asistir y proporcionar las mejores
-                  prácticas para cumplir con los objetivos establecidos.
+                  Tuve la suerte de trabajar con Growing HR a través de la empresa iúnigo y la experiencia fue excelente. Tanto Mariano como Juan reflejan ser buenos profesionales con abundante conocimientos del mercado IT, siendo capaces de cumplir en tiempo y en forma con los objetivos planteados y mostrando en todo momento muy buena predisposición para trabajar en equipo.
                 </div>
                 <div className='author'>
                   Dolores Canónico - Talent Accquisition Specialist - Iúnigo
@@ -95,14 +91,11 @@ class Testimony extends Component {
                   TESTIMONIOS
                 </div>
                 <div className='content'>
-                  Creemos en la relación con el cliente, más allá de cubrir
-                  búsquedas encontrando y seleccionando a las personas
-                  indicadas, nos orientamos a ser partners en sus procesos
-                  de selección, pudiendo asistir y proporcionar las mejores
-                  prácticas para cumplir con los objetivos establecidos.
+                  Trabajé con Growing en el desafío de empezar a armar el equipo de iúnigo, cuando ni siquiera podíamos contar que éramos iúnigo, solamente que éramos un startup digital. En ese momento me ayudaron a reclutar perfiles tales como Developers de back y de front, tester, diseñadores.
+                  Tuve una muy buena experiencia ya que tanto Mariano como Juan se involucran mucho en el cliente, entendiendo la necesidad, los perfiles, y entregando respuestas de calidad en tiempo y forma. Volvería a trabajar con ellos.
                 </div>
                 <div className='author'>
-                  Dolores Canónico - Talent Accquisition Specialist - Iúnigo
+                  Malía Cara - People Manager - Iúnigo
                 </div>
                 <img
                   className='low'
@@ -126,14 +119,10 @@ class Testimony extends Component {
                   TESTIMONIOS
                 </div>
                 <div className='content'>
-                  Creemos en la relación con el cliente, más allá de cubrir
-                  búsquedas encontrando y seleccionando a las personas
-                  indicadas, nos orientamos a ser partners en sus procesos
-                  de selección, pudiendo asistir y proporcionar las mejores
-                  prácticas para cumplir con los objetivos establecidos.
+                Growing realizó la gestión para que yo ingrese a mi actual trabajo. Al momento de contactarme tenian muy claras las pautas de búsqueda de la empresa y las supieron transmitir de manera cristalina, también pudieron evacuar todas mis dudas. El contacto lo hicieron muy rápido, y siempre estuvieron presentes verificando como venia el proceso. Su trabajo fue muy profesional, si alguien debe cambiar de trabajo recomiendo contactar a Growing.
                 </div>
                 <div className='author'>
-                  Dolores Canónico - Talent Accquisition Specialist - Iúnigo
+                  Mariano Markon - Solidity Developer - Ripio
                 </div>
                 <img
                   className='low'

@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     overflow-x: hidden;
 
     ${bp('ts', 'min-width')`
-      position: absolute;      
+      position: absolute;
     `}
   }
 `
@@ -50,10 +50,13 @@ export const LeftForm = styled.form`
     }
     > div {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      ${bp('ts')`
+        flex-direction: column;
+      `}
       justify-content: center;
       align-items: center;
-      > input {        
+      > input {
         -webkit-appearance: none;
         border: none;
         border-radius: 1px;
@@ -177,10 +180,13 @@ export const RightForm = styled.form`
     }
     > div {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      ${bp('ts')`
+        flex-direction: column;
+      `}
       justify-content: center;
       align-items: center;
-      > input {        
+      > input {
         -webkit-appearance: none;
         border: none;
         border-radius: 1px;

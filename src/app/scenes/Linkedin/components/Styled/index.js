@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { bp } from '../../../../../helpers/styleHelper'
 
+
 export const Wrapper = styled.div`
   height: 300px;
   display: flex;
@@ -25,6 +26,7 @@ export const Profile = styled.div`
   .face {
     height: 125px;
     width: 125px;
+    background: url(${props => props.pic}) no-repeat 50% 50% / cover; 
     border-radius: 50%;
     margin: 5px;
   }
@@ -35,10 +37,21 @@ export const Profile = styled.div`
     font-weight: 900;
   }
 
-  .logo {
-    margin: 10px;
-    width: 50px;
-    height: 50px;
+  .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .linkedin-logo {
+    margin: 10px 0;    
+    height: 45px;
   }
   
+
+  .skype-logo {
+    margin: 10px;
+    width: 25px;
+  }
 `
