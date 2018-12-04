@@ -1,38 +1,58 @@
 import React, { Component } from 'react'
 import { ThemeProvider, injectGlobal } from 'styled-components'
+import { connect } from 'react-redux'
 import { theme } from '../helpers/theme'
 import { global } from '../helpers/styleHelper'
 import Header from './scenes/Header'
 import Hero from './scenes/Hero'
-import WhatWeDo from './scenes/WhatWeDo'
-import DNA from './scenes/DNA'
-import Testimony from './scenes/Testimony'
-import Difference from './scenes/Difference'
-import Linkedin from './scenes/Linkedin'
-import ContactHero from './scenes/ContactHero'
+import What from './scenes/What'
+import How from './scenes/How'
+import Mission from './scenes/Mission'
+import Success from './scenes/Success'
 import Contact from './scenes/Contact'
-import Footer from './scenes/Footer'
+import { addLocaleData, IntlProvider } from 'react-intl'
+import localeDataEn from 'react-intl/locale-data/en'
+import localeDataEs from 'react-intl/locale-data/es'
+import messages from '../intl.json'
+
+addLocaleData([...localeDataEn, ...localeDataEs])
 
 injectGlobal`${global(theme)}` // eslint-disable-line
 
-export default class App extends Component {
+
+class App extends Component {
 
   render(){
+    console.log(this.props.lang)
     return (
-      <ThemeProvider theme={theme}>
-        <div>
-          <Header/>
-          <Hero/>
-          <WhatWeDo/>
-          <DNA/>
-          <Difference/>
-          <Testimony/>
-          <Linkedin/>          
-          <ContactHero/>
-          <Contact/>
-          <Footer/>
-        </div>
-      </ThemeProvider>
+        <IntlProvider
+          key={ this.props.lang.lang }
+          locale={this.props.lang.lang}
+          messages={messages[this.props.lang.lang]}
+        >
+          <ThemeProvider theme={theme}>
+            <div>
+              <Header/>
+              <Hero/>
+              <What/>
+              <How/>
+              <Mission/>
+              <Success/>
+              <Contact/>
+            </div>
+          </ThemeProvider>
+        </IntlProvider>
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    lang: state.app
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  null
+)(App)

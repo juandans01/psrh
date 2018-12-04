@@ -1,160 +1,63 @@
 import styled from 'styled-components'
-import { bp } from '../../../../../helpers/styleHelper'
+import Image1 from '../../../../../assets/hero.jpg'
+import Image2 from '../../../../../assets/mission2.jpg'
 
 export const Wrapper = styled.div`
+  height: 600px;
   position: relative;
-  overflow: hidden;
-  height: 800px;
 `
 
-export const BackWrapper = styled.div`
-  z-index: 1;
-  min-height: 600px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background: linear-gradient(to right top, #00c2be, #71d8bf);
-  ${bp('ts')`
-    flex-direction: column;
-    align-items: center;
+export const FirstBackground = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image1}) no-repeat 0% 100% / cover;
+  height: 600px;
+
+  > div {
+    height: 100%;
+    display: flex;
     justify-content: center;
-    min-height: 800px;
-  `}
-`
+    align-items: center;
 
-export const Left = styled.div`
-  width: 400px;
-  ${bp('ts')`
-    width: auto;
-    padding: 20px;
-
-    > div {
-      font-size: 36px;
+    > p {
+      max-width: 600px;
+      color: white;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.4;
+      text-align: center;
     }
-  `}
-  > p {
-    line-height: 1.4;
-  }
+  }  
 `
 
-export const Right = styled.div`
-  z-index: 3;
-  > img {
-      width: 350px;
-      height: 350px;
-  }
+export const SecondBackground = styled.div`
+  background: background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image2}) no-repeat 50% 50% / contain;
+  transform: rotate(90deg);
+  height: 600px;
+  > div {
+    height: 100%;
+    transform: rotate(270deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > p {
+      max-width: 600px;
+      color: white;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.4;
+      text-align: center;
+    }
+  }  
 `
 
-export const Dots = styled.img`
-  z-index: 1;
+export const MapWrapper = styled.div`
   position: absolute;
-  ${bp('ts')`
-    height: 500px;
-  `}
-  height: 700px;
-  right: -100px;
-  bottom: 0px;
-`
-
-export const MenuWrapper = styled.div`
-  z-index: 5;
-  position: absolute;  
-  top: 0;
-  left: 0;
+  top: 70%;
   width: 100%;
-  height: 90px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
+  justify-content: center;
 
-export const MenuTitle = styled.div`  
-  margin-left: 60px;
-  > img {
-    width: 260px;
-    margin-top: 5px;
-  }
-
-  ${bp('ts')`
-    margin-left: 10px;
-  `}
-`
-
-export const Menu = styled.div`
-  color: white;
-  float: right;
-  margin-right: 80px;
-
-  > div {    
-    display: inline;
-    padding: 5px 10px;
-    cursor: pointer;
-    position: relative;
-    ${bp('ts')`
-      display: none;
-    `}
-  }
-
-  ${bp('ts')`
-    position: absolute;
-    margin: 5px 10px;
-    right: 0;
-    top: 50px;        
-    background: ${props => props.theme.greenShade};
-    color: white;    
-
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 200ms ease, visibility 0ms 200ms;
-
-    &.mobile-visible {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 200ms ease, visibility 0ms 0ms;
-    }
-
-    border-radius: 2px;
-
-    > div { 
-      display: block;
-      padding: 12px;
-    }
-  `}
-`
-
-export const MobileMenu = styled.div`
-  display: inline-block;
-  vertical-align: top;
-  
-  button {
-    margin: 0 0 0 220px;
-    width: 60px;
-    height: 40px;
-    background: transparent;
-    border-radius: 1px;
-    border: none;
-    box-sizing: border-box;
-    transition: background 300ms ease 0ms;
-    outline: unset !important;
-    cursor: pointer;
-
-    ${bp('ts')`
-      margin-left: 30px;
-    `}
-  }
-
-  svg {
-    fill: white;
-    width: 40px;
-    height: 40px;
-  }
-
-  path {
-    stroke: white;
-    stroke-width: 6;
-  }
-
-  ${bp('ts', 'min-width')`
-    display: none;  
-  `}
+  > img { 
+    height: 350px;
+  }  
 `

@@ -1,75 +1,51 @@
 import React, { Component } from 'react'
-import Title from '../../components/Title'
-import { Wrapper, Left, Right, Dots, BackWrapper, MenuWrapper, MenuTitle, Menu, MobileMenu } from './components/Styled'
-import { scrollTo } from '../../../helpers/styleHelper'
-import Logo from '../../../assets/logo-light.svg'
-import HeroAgile from '../../../assets/hero-agile.svg'
-import Dot from '../../../assets/hero-dot.svg'
+import { injectIntl } from 'react-intl';
+import Slider from 'react-slick'
+import Map from '../../../assets/map.svg'
+import { Wrapper, FirstBackground, SecondBackground, MapWrapper } from './components/Styled'
 
-export default class Hero extends Component {
+class Hero extends Component {
 
-  constructor(props){
-    super(props)
-    this.state = {
-      navMobileVisible: false,
+  render(){
+
+    const settings = {
+      arrows: false,
+      infinite: true,      
+      slidesToShow:  1,
+      slidesToScroll: 1,
+      // autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 12000,
+      beforeChange: this.beforeSlideChange,
     }
-  }
 
-  onMenuIconClick = () => {
-    this.setState({
-      navMobileVisible: !this.state.navMobileVisible
-    })
-  }
-
-  render() {
     return (
-      <Wrapper id='hero'>
-        <BackWrapper>
-          <MenuWrapper>
-              <MenuTitle>
-                <img src={Logo} alt='logo'/>
-              </MenuTitle>
-              <Menu className={this.state.navMobileVisible ? 'mobile-visible' : null}>
-                  <div onClick={() => {scrollTo('hero', -70)}}>Home</div>
-                  <div onClick={() => {scrollTo('dna', -70)}}>Como trabajamos</div>
-                  <div onClick={() => {scrollTo('contact', -100)}}>Contacto</div>            
-              </Menu>        
-              <MobileMenu onClick={this.onMenuIconClick}>
-                <button type='button'>
-                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 139 139'>
-                    <path d='M26.5 46.3h86' />
-                    <path d='M26.5 92.7h86' />
-                    <path d='M26.5 69.5h86' />
-                    <path d='M26.5 69.5h86' />
-                  </svg>
-                </button>
-              </MobileMenu>
-          </MenuWrapper>
-          <Left>
-            <Title
-              fontSize="50px"
-            >
-              Somos<br/>
-              GROWING-HR,
-            </Title>
-            <p>
-              consultora de recursos humanos especializada en
-              brindar soluciones para startups y empresas, de
-              Tecnología y Producto digital.
-            </p>
-          </Left>
-          <Right>
-            <img
-              src={HeroAgile}
-              alt="hero-agile"
-            />
-          </Right>
-        </BackWrapper>        
-        <Dots
-          src={Dot}
-          alt='dot'
-        />
+      <Wrapper>
+        <Slider ref={slider => (this.slider = slider)} {...settings}>
+          <FirstBackground>
+            <div>
+              <p>
+                {this.props.intl.formatMessage({id: 'hero.first'})}
+              </p>
+            </div>
+          </FirstBackground>
+          <SecondBackground>
+            <div>
+              <p>
+                {this.props.intl.formatMessage({id: 'hero.second'})}
+              </p>
+            </div>
+          </SecondBackground>
+        </Slider>
+        <MapWrapper>
+          <img
+            src={Map}
+            alt='map'
+          />
+        </MapWrapper>
       </Wrapper>
     )
   }
 }
+
+export default injectIntl(Hero)

@@ -2,13 +2,14 @@ import styled from 'styled-components'
 import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
+  margin-top: 35px;
   z-index: 5;
-  position: fixed; /* Set the navbar to fixed position */
+  position: absolute; /* Set the navbar to fixed position */
   top: 0;
   width: 100%;
   height: 90px;
-  background: linear-gradient(to right top, #00c2be, #71d8bf);
-  display: ${props => props.visible ? "flex" : "none"};
+  background: rgba(0, 0, 0, 0.0);
+  display: flex;
   align-items: center;
   justify-content: space-between;
 `
@@ -16,8 +17,7 @@ export const Wrapper = styled.div`
 export const Title = styled.div`  
   margin-left: 60px;
   > img {
-    width: 260px;
-    margin-top: 5px;
+    width: 125px;    
   }
 
   ${bp('ts')`
@@ -27,12 +27,13 @@ export const Title = styled.div`
 
 export const Menu = styled.div`
   color: white;
-  float: right;
-  margin-right: 80px;
+  
 
-  > div {    
+  > div {
+    font-size: 14px;
+    font-weight: 200;
     display: inline;
-    padding: 5px 10px;
+    padding: 5px 20px;
     cursor: pointer;
     position: relative;
     ${bp('ts')`
@@ -44,8 +45,8 @@ export const Menu = styled.div`
     position: absolute;
     margin: 5px 10px;
     right: 0;
-    top: 50px;        
-    background: ${props => props.theme.greenShade};
+    top: 50px;
+    background: rgba(0, 0, 0, 0.0);
     color: white;    
 
     visibility: hidden;
@@ -103,4 +104,28 @@ export const MobileMenu = styled.div`
     display: none;  
   `}
 
+`
+
+export const Language = styled.div`
+  margin-right: 60px;
+  display: flex;
+
+  > img { 
+    height: 35px;
+  }
+
+  > select {
+    -webkit-appearance: none;
+    outline: none;
+    color: white;
+    background: none;
+    border: none;
+    > option {
+      -webkit-appearance: none;
+      outline: none;
+      color: white;
+      background: none;
+      border: none;
+    }
+  }
 `

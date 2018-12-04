@@ -1,9 +1,21 @@
-import styled from 'styled-components'
+import React, { Component } from 'react'
+import { Wrapper, Border } from './components/Styled'
 
-export default styled.div`
-  font-family: 'Montserrat';
-  font-size: ${props => props.fontSize ? props.fontSize : "65px"};
-  font-style: ${props => props.fontStyle ? props.fontStyle : "normal"}
-  color: ${props => props.fontColor ? props.fontColor : props.theme.greyShade};
-  font-weight: 700;
-`
+export default class Title extends Component {
+
+  render(){
+    console.log(this.props.borderWhite)
+    return (
+      <Wrapper
+        color={this.props.color}        
+      >
+        <div>
+          {this.props.text.toUpperCase()}
+        </div>      
+        <Border
+          borderWhite={this.props.borderWhite}
+        />
+      </Wrapper>
+    )
+  }
+}

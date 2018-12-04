@@ -37,7 +37,7 @@ export const global = (theme) => css`
   ${PureCSS.gridResponsive(breakpoints)}
 
   html {
-    font: 16px/1 'Open Sans', sans-serif;
+    font: 16px/1 'Poppins', sans-serif;
     color: ${theme.greyShade};
     background: white;
     -webkit-font-smoothing: antialiased;
@@ -45,7 +45,7 @@ export const global = (theme) => css`
   }
 
   .pure-g [class*="pure-u"] {
-    font: 16px/1 'Open Sans', sans-serif;
+    font: 16px/1 'Poppins', sans-serif;
   }
 
   strong {
