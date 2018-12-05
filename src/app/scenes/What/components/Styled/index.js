@@ -11,13 +11,17 @@ export const Wrapper = styled.div`
   
   > p {
     margin-top: 20px;
-    width: 600px;
-    ${bp('md')`
-      width: auto;
-    `}
+    width: 600px;    
     
     color: #9c9b9b;
     font-size: 14px;
     line-height: 1.6;
   }
+
+  ${bp('ts')`
+    margin-top: 50px;
+    > p {
+      width: auto;
+    }
+  `}
 `

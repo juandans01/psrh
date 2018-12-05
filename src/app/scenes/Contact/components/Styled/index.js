@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
 export const Input = styled.input`  
   height: 20px;
   border: none;
-  padding: 5px 1px;
+  padding: 8px 3px;
   width: 150px;
   margin: 5px;
 `
@@ -41,6 +41,7 @@ export const InputsWrapper = styled.div`
     justify-content: center;
 
     > textarea {
+      padding: 8px 3px;
       margin: 5px 5px;
       width: 100%;
       height: 70px;

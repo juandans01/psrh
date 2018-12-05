@@ -9,6 +9,7 @@ import What from './scenes/What'
 import How from './scenes/How'
 import Mission from './scenes/Mission'
 import Success from './scenes/Success'
+import Companies from './scenes/Companies'
 import Contact from './scenes/Contact'
 import { addLocaleData, IntlProvider } from 'react-intl'
 import localeDataEn from 'react-intl/locale-data/en'
@@ -38,6 +39,7 @@ class App extends Component {
               <How/>
               <Mission/>
               <Success/>
+              <Companies/>
               <Contact/>
             </div>
           </ThemeProvider>

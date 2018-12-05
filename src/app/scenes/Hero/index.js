@@ -3,6 +3,8 @@ import { injectIntl } from 'react-intl';
 import Slider from 'react-slick'
 import Map from '../../../assets/map.svg'
 import { Wrapper, FirstBackground, SecondBackground, MapWrapper } from './components/Styled'
+import AnimatedCircle from '../../components/AnimatedCircle'
+
 
 class Hero extends Component {
 
@@ -13,10 +15,9 @@ class Hero extends Component {
       infinite: true,      
       slidesToShow:  1,
       slidesToScroll: 1,
-      // autoplay: true,
+      autoplay: true,
       speed: 1000,
-      autoplaySpeed: 12000,
-      beforeChange: this.beforeSlideChange,
+      autoplaySpeed: 12000    
     }
 
     return (
@@ -38,10 +39,37 @@ class Hero extends Component {
           </SecondBackground>
         </Slider>
         <MapWrapper>
-          <img
-            src={Map}
-            alt='map'
-          />
+          <div>
+            <img
+              src={Map}
+              alt='map'
+            />
+            <AnimatedCircle
+              className='argentina'
+              initialPose='none'
+              pose='attention'
+            />
+            <AnimatedCircle
+              className='chile'
+              initialPose='none'
+              pose='attention'
+            />
+            <AnimatedCircle
+              className='peru'
+              initialPose='none'
+              pose='attention'
+            />
+            <AnimatedCircle
+              className='colombia'
+              initialPose='none'
+              pose='attention'
+            />
+            <AnimatedCircle
+              className='usa'
+              initialPose='none'
+              pose='attention'
+            />
+          </div>
         </MapWrapper>
       </Wrapper>
     )

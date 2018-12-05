@@ -48,18 +48,28 @@ class Contact extends Component {
         </div>
         <InputsWrapper>
           <div>
-            <Input/>
-            <Input/>
+            <Input
+              placeholder={this.props.intl.formatMessage({id: 'contact.name'})}
+            />
+            <Input
+              placeholder={this.props.intl.formatMessage({id: 'contact.email'})}
+            />
           </div>
           <div>
-            <Input/>
-            <Input/>
+            <Input
+              placeholder={this.props.intl.formatMessage({id: 'contact.company'})}
+            />
+            <Input
+              placeholder={this.props.intl.formatMessage({id: 'contact.phone'})}
+            />
           </div>
           <div>
-            <textarea/>
+            <textarea
+              placeholder={this.props.intl.formatMessage({id: 'contact.message'})}
+            />
           </div>
           <div>
-            <Button>Enviar</Button>
+            <Button>{this.props.intl.formatMessage({id: 'contact.button'})}</Button>
           </div>
         </InputsWrapper>
       </Wrapper>

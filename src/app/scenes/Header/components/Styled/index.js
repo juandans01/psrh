@@ -71,7 +71,9 @@ export const Menu = styled.div`
 export const MobileMenu = styled.div`
   display: inline-block;
   vertical-align: top;
-  
+  position: absolute;
+  right: 0;
+ 
   button {
     margin: 0 0 0 220px;
     width: 60px;
@@ -108,6 +110,9 @@ export const MobileMenu = styled.div`
 
 export const Language = styled.div`
   margin-right: 60px;
+  ${bp('ts')`
+    margin-right: 80px;
+  `}
   display: flex;
 
   > img { 
@@ -126,6 +131,7 @@ export const Language = styled.div`
       color: white;
       background: none;
       border: none;
+      color: black;
     }
   }
 `

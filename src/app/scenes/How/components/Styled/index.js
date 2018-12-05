@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
 `
 
 export const Main = styled.div`
+  position: relative;  
   display: flex;
   justify-content: space-between;
   
@@ -30,7 +31,7 @@ export const Block = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 20px 30px;
 
   > img {
     height: 150px;
@@ -47,6 +48,7 @@ export const Block = styled.div`
 `
 
 export const Foot = styled.div`
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,5 +61,29 @@ export const Foot = styled.div`
   > img {
     height: 75px;
     width: 75px;
+  }
+`
+
+export const Line1Wrapper = styled.div`
+  ${bp('md')`
+    display: none;
+  `}
+  position: absolute;
+  top: 180px;
+  left: 260px;
+  > img {
+    height: 150px;
+  }
+`
+
+export const Line2Wrapper = styled.div`
+  ${bp('md')`
+    display: none;
+  `}
+  position: absolute;
+  right: 165px;
+  bottom: -50px;
+  > img {
+    width: 150px;
   }
 `

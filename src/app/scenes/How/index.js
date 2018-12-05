@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
-import { Wrapper, Block, Main, Foot } from './components/Styled'
+import { Wrapper, Block, Main, Foot, Line1Wrapper, Line2Wrapper } from './components/Styled'
 import Title from '../../components/Title'
 
 import People from '../../../assets/people.svg'
 import Paper from '../../../assets/paper.svg'
 import Check from '../../../assets/check.svg'
+import Line1 from '../../../assets/line1.svg'
+import Line2 from '../../../assets/line2.svg'
 
 class How extends Component {
 
@@ -26,7 +28,12 @@ class How extends Component {
               {this.props.intl.formatMessage({id: 'how.left'})}
             </p>
           </Block>
-          <div></div>
+          <Line1Wrapper>
+            <img
+              src={Line1}
+              alt='line-1'
+            />
+          </Line1Wrapper>
           <Block className='right'>
             <img
               alt='people'
@@ -36,6 +43,12 @@ class How extends Component {
               {this.props.intl.formatMessage({id: 'how.right'})}
             </p>
           </Block>
+          <Line2Wrapper>
+            <img
+              src={Line2}
+              alt='line-2'
+            />
+          </Line2Wrapper>
         </Main>
         <Foot>
           <img

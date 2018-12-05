@@ -41,41 +41,47 @@ class Success extends Component {
         <Slider ref={slider => (this.slider = slider)} {...settings}>
           <Slide>
             <div>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.slide1.first'})}</PTitle>
-              </p>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.second.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide1.second.text'})}
-              </p>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.third.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide1.third.text'})}
-              </p>
+              <div>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.slide1.first'})}</PTitle>
+                </p>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.second.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide1.second.text'})}
+                </p>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.third.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide1.third.text'})}
+                </p>
+              </div>
             </div>
           </Slide>
           <Slide>
             <div>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.slide2.first'})}</PTitle>
-              </p>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.second.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide2.second.text'})}
-              </p>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.third.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide2.third.text'})}
-              </p>
+              <div>              
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.slide2.first'})}</PTitle>
+                </p>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.second.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide2.second.text'})}
+                </p>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.third.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide2.third.text'})}
+                </p>
+              </div>
             </div>
           </Slide>
           <Slide>
             <div>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.slide3.first'})}</PTitle>
-              </p>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.second.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide3.second.text'})}
-              </p>
-              <p>
-                <PTitle>{this.props.intl.formatMessage({id: 'success.third.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide3.third.text'})}
-              </p>
+              <div>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.slide3.first'})}</PTitle>
+                </p>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.second.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide3.second.text'})}
+                </p>
+                <p>
+                  <PTitle>{this.props.intl.formatMessage({id: 'success.third.title'})}</PTitle>: {this.props.intl.formatMessage({id: 'success.slide3.third.text'})}
+                </p>
+              </div>
             </div>
           </Slide>
         </Slider>

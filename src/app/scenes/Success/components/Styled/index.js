@@ -1,9 +1,13 @@
 import styled from 'styled-components'
+import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
   padding-top: 30px;
   background: #41badf;
   height: 400px;
+  ${bp('md')`
+    height: 500px;
+  `}
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,19 +15,27 @@ export const Wrapper = styled.div`
 `
 
 export const Slide = styled.div`
-  height: 300px;  
+  height: 300px;
+  ${bp('md')`
+    height: 400px;
+  `}
   > div {    
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    > p {
+    > div {
       max-width: 600px;
-      text-align: justify;
-      font-size: 14px;
-      color: white
-      line-height: 1.4;
+      ${bp('md')`
+        padding: 10px;
+      `}
+      > p {        
+        text-align: justify;
+        font-size: 14px;
+        color: white
+        line-height: 1.4;
+      }
     }
   }
 `
@@ -34,6 +46,9 @@ export const PTitle = styled.div`
 `
 
 export const Dots = styled.div`
+  ${bp('md')`
+    display: none;
+  `}
   > div {
     display: flex;
     flex-direction: column;    
