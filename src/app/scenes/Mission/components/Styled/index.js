@@ -5,9 +5,10 @@ import { bp } from '../../../../../helpers/styleHelper'
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  height: 400px;
-  margin: 20px 0;
+  height: 500px;
+  margin: 60px 0 20px 0;
   ${bp('md')`
+    margin: 20px 0;
     flex-direction: column;
   `}
 `
@@ -22,8 +23,9 @@ export const Right = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 400px;
+  padding-top: 35px;
   ${bp('md')`
-    width: auto;
+    width: auto;    
   `}
   > p {
     padding: 20px 40px 0 40px;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image1 from '../../../../../assets/hero.jpg'
-import Image2 from '../../../../../assets/mission2.jpg'
+import Image2 from '../../../../../assets/slide2.png'
 import { bp } from '../../../../../helpers/styleHelper'
 
 export const Wrapper = styled.div`
@@ -22,7 +22,7 @@ export const FirstBackground = styled.div`
       max-width: 600px;
       color: white;
       font-size: 20px;
-      font-weight: 900;
+      font-weight: 600;
       line-height: 1.4;
       text-align: center;
     }
@@ -30,7 +30,7 @@ export const FirstBackground = styled.div`
 `
 
 export const SecondBackground = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image1}) no-repeat 0% 100% / cover;  
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image2}) no-repeat 0% 100% / cover;  
   height: 600px;
 
   > div {
@@ -43,7 +43,7 @@ export const SecondBackground = styled.div`
       max-width: 600px;
       color: white;
       font-size: 20px;
-      font-weight: 900;
+      font-weight: 600;
       line-height: 1.4;
       text-align: center;
     }
@@ -73,7 +73,7 @@ export const MapWrapper = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #2eb3ab;
+      background: #303180;
     }
 
     .argentina {
@@ -83,7 +83,7 @@ export const MapWrapper = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #2eb3ab;
+      background: #303180;
     }
 
     .colombia {
@@ -93,7 +93,7 @@ export const MapWrapper = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #2eb3ab;
+      background: #303180;
     }
 
     .peru {
@@ -103,7 +103,7 @@ export const MapWrapper = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #2eb3ab;
+      background: #303180;
     }
 
     .usa {
@@ -113,7 +113,7 @@ export const MapWrapper = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #2eb3ab;
+      background: #303180;
     }
   }
 `

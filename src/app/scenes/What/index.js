@@ -6,7 +6,9 @@ import { Wrapper } from './components/Styled'
 class What extends Component {
   render(){
     return(
-      <Wrapper>
+      <Wrapper
+        id='what'
+      >
         <Title
           color='primary'
           text={this.props.intl.formatMessage({id: 'what.title'})}

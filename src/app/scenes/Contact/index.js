@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Wrapper, Input, InputsWrapper, Button } from './components/Styled'
+import { Wrapper, Input, InputsWrapper, Button, FormWrapper } from './components/Styled'
 import axios from 'axios'
+import Mercurias from '../../../assets/mercurias.svg'
 import { injectIntl } from 'react-intl'
 
 class Contact extends Component {
@@ -8,20 +9,22 @@ class Contact extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      from_name: '',
-      from_email: '',
+      name: '',
+      email: '',
       company: '',
       phone: '',
-      message: ''
+      message: '',
+      success: false
     }
   }
 
 
-  sendEmail = async() => {
+  sendEmail = async(e) => {
+    e.preventDefault()
     const data = {
       service_id: 'gmail',
-      template_id: 'something',
-      user_id: 'user_something',
+      template_id: 'contact',
+      user_id: 'user_ktSg46K7iS1IsIEYiwvgn',
       template_params: {
         from_name: this.state.name,
         from_email: this.state.email,
@@ -30,48 +33,98 @@ class Contact extends Component {
         message: this.state.message        
       }
     }
+
     this.setState({
       success: true
-    })
+    })    
 
     const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data)    
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   render(){    
     return(
       <Wrapper id='contact'>
-        <div>
-          <h2>{this.props.intl.formatMessage({id: 'contact.title'})}</h2>
+        <FormWrapper>
+          { this.state.success ? (
           <div>
-          {this.props.intl.formatMessage({id: 'contact.subtitle'})}
-          </div>
+            <div>
+            {this.props.intl.formatMessage({id: 'contact.success'})}
+            </div>
+          </div>  
+          ) : [
+          <div
+            key='head'
+          >
+            <h2>{this.props.intl.formatMessage({id: 'contact.title'})}</h2>
+            <div>
+            {this.props.intl.formatMessage({id: 'contact.subtitle'})}:
+            </div>
+          </div>,
+          <InputsWrapper
+            key='body'
+          >
+            <form
+              onSubmit={this.sendEmail}
+            >
+              <div>
+                <Input
+                  name='name'
+                  required
+                  value={this.state.name}
+                  onChange={this.handleChange}
+                  placeholder={this.props.intl.formatMessage({id: 'contact.name'})}
+                />
+                <Input
+                  name='email'
+                  required
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  placeholder={this.props.intl.formatMessage({id: 'contact.email'})}
+                />
+              </div>
+              <div>
+                <Input
+                  name='company'
+                  required
+                  value={this.state.company}
+                  onChange={this.handleChange}
+                  placeholder={this.props.intl.formatMessage({id: 'contact.company'})}
+                />
+                <Input
+                  name='phone'
+                  required
+                  value={this.state.phone}
+                  onChange={this.handleChange}
+                  placeholder={this.props.intl.formatMessage({id: 'contact.phone'})}
+                />
+              </div>
+              <div>
+                <textarea
+                  name='message'
+                  required
+                  value={this.state.message}
+                  onChange={this.handleChange}
+                  placeholder={this.props.intl.formatMessage({id: 'contact.message'})}
+                />
+              </div>
+              <div>
+                <Button                
+                >{this.props.intl.formatMessage({id: 'contact.button'})}</Button>
+              </div>
+            </form>
+          </InputsWrapper>
+          ]}
+        </FormWrapper>
+        <div className='mercurias'>
+          <div>{this.props.intl.formatMessage({id: 'contact.mercurias'})}</div>          
+          <img src={Mercurias} alt='mercurias'/>
         </div>
-        <InputsWrapper>
-          <div>
-            <Input
-              placeholder={this.props.intl.formatMessage({id: 'contact.name'})}
-            />
-            <Input
-              placeholder={this.props.intl.formatMessage({id: 'contact.email'})}
-            />
-          </div>
-          <div>
-            <Input
-              placeholder={this.props.intl.formatMessage({id: 'contact.company'})}
-            />
-            <Input
-              placeholder={this.props.intl.formatMessage({id: 'contact.phone'})}
-            />
-          </div>
-          <div>
-            <textarea
-              placeholder={this.props.intl.formatMessage({id: 'contact.message'})}
-            />
-          </div>
-          <div>
-            <Button>{this.props.intl.formatMessage({id: 'contact.button'})}</Button>
-          </div>
-        </InputsWrapper>
       </Wrapper>
     )
   }

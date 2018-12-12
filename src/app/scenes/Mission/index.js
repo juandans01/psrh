@@ -10,7 +10,9 @@ class Mission extends Component {
 
   render(){
     return (
-      <Wrapper>
+      <Wrapper
+        id='mission'
+      >
         <Left>
         </Left>
         <Right>

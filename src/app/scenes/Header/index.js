@@ -16,7 +16,7 @@ class Header extends Component {
     this.state = {
       navMobileVisible: false,
       visible: false,
-      selectValue: 'en'
+      selectValue: 'es'
     }
   }
 
@@ -30,10 +30,6 @@ class Header extends Component {
     this.setState({
       navMobileVisible: false
     })
-  }
-
-  componentDidMount() {
-    // window.addEventListener('scroll', this.onWindowScroll)
   }
 
   onWindowScroll = () => {    
@@ -62,16 +58,15 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Wrapper          
-        >
+        <Wrapper>
             <Title>
               <img src={Logo} alt='logo'/>
             </Title>
             <Menu className={this.state.navMobileVisible ? 'mobile-visible' : null}>
-                <div onClick={() => {scrollTo('hero', -70)}}>{this.props.intl.formatMessage({id: 'header.what'})}</div>
-                <div onClick={() => {scrollTo('dna', -70)}}>{this.props.intl.formatMessage({id: 'header.mission'})}</div>
-                <div onClick={() => {scrollTo('contact', -100)}}>{this.props.intl.formatMessage({id: 'header.success'})}</div>
-                <div onClick={() => {scrollTo('contact', -100)}}>{this.props.intl.formatMessage({id: 'header.contact'})}</div>
+                <div onClick={() => {scrollTo('what', -10)}}>{this.props.intl.formatMessage({id: 'header.what'})}</div>
+                <div onClick={() => {scrollTo('mission', -10)}}>{this.props.intl.formatMessage({id: 'header.mission'})}</div>
+                <div onClick={() => {scrollTo('success', -10)}}>{this.props.intl.formatMessage({id: 'header.success'})}</div>
+                <div onClick={() => {scrollTo('contact', -10)}}>{this.props.intl.formatMessage({id: 'header.contact'})}</div>
             </Menu>
             <MobileMenu onClick={this.onMenuIconClick}>
               <button type='button'>
@@ -108,4 +103,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   null,
   mapDispatchToProps
-)(onClickOutside(injectIntl(Header)))
+)(injectIntl(onClickOutside(Header)))

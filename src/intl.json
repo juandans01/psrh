@@ -1,6 +1,7 @@
 {
   "en": {    
-    "contact.title": "Contact",
+    "contact.success": "Message sent!",
+    "contact.title": "CONTACT",
     "contact.subtitle": "fill the next form",
     "contact.name": "Full name",
     "contact.email": "E-mail",
@@ -8,6 +9,7 @@
     "contact.phone": "Phone",
     "contact.message": "Message",
     "contact.button": "Send",
+    "contact.mercurias": "Design and development by",
     "mission.title": "Our mision",
     "mission.description": "We seek to connect companies and candidates through the efficient combination of needs and skills so that we not only provide job opportunities, but that people enjoy of their tasks and add value to the work environment to achieve a better world.",  
     "what.title": "What do we do?",
@@ -17,7 +19,7 @@
     "how.right": "Searches are handled privately, selecting and presenting individually the profile of each candidate together with an analysis qualitative detailing reasons for job change, strengths, weaknesses and long-term projection term.",
     "how.foot": "The selection process continues until the company manages to acquire the desired talent.",
     "hero.first": "PSRH is a headhunting consultancy specialized in digital talents with more than 7 years working together with media agencies, banks, fintech companies and technology in Argentina, Chile, Peru, Colombia and the United States.",
-    "hero.second": "La genialidad es 1% inspiración y 99% esfuerzo. Somos un nuevo concepto en selección de talentos: somos Partners de nuestros Clientes. Trabajamos como si fuésemos parte de su equipo para obtener resultados de valor",
+    "hero.second": "Genius is 1% inspiration and 99% perspiration. We are a new concept talent recruiting: we are Partners of our clients. We work as part of your team to get valuable results. ",
     "header.what": "What we do",
     "header.mission": "Mission",
     "header.success": "Success cases",
@@ -36,7 +38,8 @@
     "success.slide3.third.text": "during 2017 a total of 130 candidates were presented, successfully meeting the requirements of the directors of the company in record time."
   },
   "es": {
-    "contact.title": "Contacto",
+    "contact.success": "Mensaje enviado!",
+    "contact.title": "CONTACTO",
     "contact.subtitle": "completa el siguiente formulario",
     "contact.name": "Nombre y apellido",
     "contact.email": "E-mail",
@@ -44,6 +47,7 @@
     "contact.phone": "Telefono",
     "contact.message": "Mensaje",
     "contact.button": "Enviar",
+    "contact.mercurias": "Diseñado y desarrollado por",
     "mission.title": "Nuestra Mision",
     "mission.description": "Buscamos conectar empresas y candidatos mediante la combinación eficiente de necesidades y skills de manera que no sólo brindemos oportunidades de trabajo, sino que las personas disfruten de sus tareas y agreguen valor al entorno laboral para lograr un mundo mejor.",
     "what.title": "¿Qué hacemos?",

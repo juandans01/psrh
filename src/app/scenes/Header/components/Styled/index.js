@@ -120,6 +120,7 @@ export const Language = styled.div`
   }
 
   > select {
+    padding-top: 5px;
     -webkit-appearance: none;
     outline: none;
     color: white;

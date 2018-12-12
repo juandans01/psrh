@@ -15,6 +15,18 @@ import PontaMedia from '../../../assets/companies/PONTA-MEDIA-LOGO.png'
 import Prisma from '../../../assets/companies/PRISMA-LOGO.png'
 import Smart from '../../../assets/companies/SMART-LOGO.png'
 
+import Tagiffy from '../../../assets/companies/tagiffy-logo.png'
+import Tog from '../../../assets/companies/tog-logo.png'
+import Say from '../../../assets/companies/say-logo.png'
+import Resolution from '../../../assets/companies/resolution-logo.png'
+import Naranja from '../../../assets/companies/naranja-logo.png'
+import Latcom from '../../../assets/companies/latcom-logo.png'
+import A from '../../../assets/companies/a-logo.png'
+import Galicia from '../../../assets/companies/galicia-logo.png'
+import InvertirOnline from '../../../assets/companies/invertir-online-logo.png'
+import Chili from '../../../assets/companies/chili-logo.png'
+import Vrainz from '../../../assets/companies/vrainz-logo.png'
+
 export default class Companies extends Component {
 
   render(){
@@ -45,6 +57,7 @@ export default class Companies extends Component {
             <div>
             <img
               src={Bluesmart}
+              alt='bluesmart'
             />
             </div>
           </Slide>
@@ -52,6 +65,7 @@ export default class Companies extends Component {
             <div>
             <img
               src={Cuoma}
+              alt='cuoma'
             />
             </div>
           </Slide>
@@ -59,6 +73,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={Dariens}
+              alt='dariens'
             />
             </div>
           </Slide>
@@ -66,6 +81,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={GlobalMind}
+              alt='global-mind'
             />
             </div>
           </Slide>
@@ -73,6 +89,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={Billo}
+              alt='billo'
             />
             </div>
           </Slide>
@@ -80,6 +97,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={Lemmonet}
+              alt='lemmonet'
             />
             </div>
           </Slide>
@@ -87,6 +105,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={Mec}
+              alt='mec'
             />
             </div>
           </Slide>
@@ -94,6 +113,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={MercadoLibre}
+              alt='mercado-libre'
             />
             </div>
           </Slide>
@@ -101,6 +121,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={Prisma}
+              alt='prisma'
             />
             </div>
           </Slide>
@@ -108,6 +129,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={Point}
+              alt='point'
             />
             </div>
           </Slide>
@@ -115,6 +137,7 @@ export default class Companies extends Component {
           <div>
             <img
               src={PontaMedia}
+              alt='ponta-media'
             />
             </div>
           </Slide>
@@ -122,8 +145,97 @@ export default class Companies extends Component {
             <div>
               <img
                 src={Smart}
+                alt='smart'
               />
             </div>             
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Tagiffy}
+              alt='tagiffy'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Tog}
+              alt='tog'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Say}
+              alt='say'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Resolution}
+              alt='resolution'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Naranja}
+              alt='naranja'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Latcom}
+              alt='latcom'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={A}
+              alt='a'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Galicia}
+              alt='galicia'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={InvertirOnline}
+              alt='invertir-online'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Chili}
+              alt='chili'
+            />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+            <img
+              src={Vrainz}
+              alt='vrainz'
+            />
+            </div>
           </Slide>
         </Slider>
       </Wrapper>

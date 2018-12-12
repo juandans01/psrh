@@ -9,14 +9,26 @@ class Success extends Component {
   constructor(props){
     super(props)
     this.state = { 
-
+      secondBack: false
     }
   }
 
-  goToSlide = (index) => {
-    this.slider.slickPause()
+  goToSlide = (index) => {    
+    this.slider.slickPause()  
     this.slider.slickGoTo(index)
     this.slider.slickPlay()
+  }
+
+  beforeChange = (oldIndex, newIndex) => {
+    if (newIndex === 1) {
+      this.setState({
+        secondBack: true
+      })
+    } else {
+      this.setState({
+        secondBack: false
+      })
+    }
   }
 
   render(){
@@ -30,10 +42,14 @@ class Success extends Component {
       autoplaySpeed: 12000,      
       vertical: true,
       verticalSwiping: true,
+      beforeChange: this.beforeChange
     }
 
     return (
-      <Wrapper>
+      <Wrapper
+        id='success'
+        secondBack={this.state.secondBack} 
+      >
         <Title
           text={this.props.intl.formatMessage({id: 'success.title'})}
           borderWhite
