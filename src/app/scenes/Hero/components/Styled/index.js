@@ -50,12 +50,12 @@ export const SecondBackground = styled.div`
   }  
 `
 
-export const MapWrapper = styled.div`
-  ${bp('ts')`
-    display: none;
-  `}
+export const MapWrapper = styled.div`  
   position: absolute;
   top: 70%;
+  ${bp('md')`
+    top: 75%;
+  `}
   width: 100%;
   display: flex;
   justify-content: center;  
@@ -64,7 +64,13 @@ export const MapWrapper = styled.div`
     position: relative;
     > img { 
       height: 350px;
+
+      ${bp('md')`
+        height: 200px;
+      `}
     }
+
+
 
     .chile {
       position: absolute;
@@ -74,6 +80,9 @@ export const MapWrapper = styled.div`
       height: 10px;
       border-radius: 50%;
       background: #303180;
+      ${bp('md')`
+        display:none;
+      `}
     }
 
     .argentina {
@@ -84,6 +93,9 @@ export const MapWrapper = styled.div`
       height: 10px;
       border-radius: 50%;
       background: #303180;
+      ${bp('md')`
+        display:none;
+      `}
     }
 
     .colombia {
@@ -94,6 +106,9 @@ export const MapWrapper = styled.div`
       height: 10px;
       border-radius: 50%;
       background: #303180;
+      ${bp('md')`
+        display:none;
+      `}
     }
 
     .peru {
@@ -104,6 +119,9 @@ export const MapWrapper = styled.div`
       height: 10px;
       border-radius: 50%;
       background: #303180;
+      ${bp('md')`
+        display:none;
+      `}
     }
 
     .usa {
@@ -114,6 +132,9 @@ export const MapWrapper = styled.div`
       height: 10px;
       border-radius: 50%;
       background: #303180;
+      ${bp('md')`
+        display:none;
+      `}
     }
   }
 `

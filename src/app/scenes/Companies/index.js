@@ -27,6 +27,11 @@ import InvertirOnline from '../../../assets/companies/invertir-online-logo.png'
 import Chili from '../../../assets/companies/chili-logo.png'
 import Vrainz from '../../../assets/companies/vrainz-logo.png'
 
+import Wunder from '../../../assets/companies/wunder-logo.png'
+import CrediCuotas from '../../../assets/companies/credicuotas-logo.png'
+import XPandit from '../../../assets/companies/xpandit-logo.png'
+import Ripio from '../../../assets/companies/ripio-logo.png'
+
 export default class Companies extends Component {
 
   render(){
@@ -52,7 +57,7 @@ export default class Companies extends Component {
     
     return (
       <Wrapper>
-        <Slider ref={slider => (this.slider = slider)} {...settings}>
+        <Slider ref={slider => (this.slider = slider)} {...settings}>          
           <Slide>
             <div>
             <img
@@ -235,6 +240,38 @@ export default class Companies extends Component {
               src={Vrainz}
               alt='vrainz'
             />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+              <img
+                src={Wunder}
+                alt='wunder'
+              />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+              <img
+                src={CrediCuotas}
+                alt='credicuotas'
+              />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+              <img
+                src={XPandit}
+                alt='xpandit'
+              />
+            </div>
+          </Slide>
+          <Slide>
+            <div>
+              <img
+                src={Ripio}
+                alt='ripio'
+              />
             </div>
           </Slide>
         </Slider>

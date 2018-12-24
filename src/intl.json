@@ -2,6 +2,8 @@
   "en": {    
     "contact.success": "Message sent!",
     "contact.title": "CONTACT",
+    "contact.address": "Address",
+    "contact.cellphone": "Cellphone",
     "contact.subtitle": "fill the next form",
     "contact.name": "Full name",
     "contact.email": "E-mail",
@@ -40,6 +42,8 @@
   "es": {
     "contact.success": "Mensaje enviado!",
     "contact.title": "CONTACTO",
+    "contact.address": "Direccion",
+    "contact.cellphone": "Celular",
     "contact.subtitle": "completa el siguiente formulario",
     "contact.name": "Nombre y apellido",
     "contact.email": "E-mail",

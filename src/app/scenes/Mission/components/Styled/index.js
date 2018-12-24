@@ -25,7 +25,7 @@ export const Right = styled.div`
   width: 400px;
   padding-top: 35px;
   ${bp('md')`
-    width: auto;    
+    width: auto;
   `}
   > p {
     padding: 20px 40px 0 40px;
@@ -44,6 +44,10 @@ export const ImagesWrapper = styled.div`
     margin-right: 5px;
     height: 190px;
     width: 190px;
+    ${bp('md')`
+      height: 170px;
+      width: 170px;
+    `}
   }
 
   ${bp('md')`

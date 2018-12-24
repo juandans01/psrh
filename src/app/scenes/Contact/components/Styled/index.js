@@ -30,6 +30,9 @@ export const FormWrapper = styled.div`
 
   > div {
     padding: 20px;
+    ${bp('md')`
+      padding: 10px;
+  `}
     > h2 {
       margin: 2px 0;
       font-weight: 900;
@@ -77,4 +80,11 @@ export const Button = styled.button`
   color: white;
   border: 1px solid white;
   border-radius: 2px;
+`
+
+export const Info = styled.div`
+  margin-top: 20px;
+  > div {
+    padding: 5px;
+  }
 `

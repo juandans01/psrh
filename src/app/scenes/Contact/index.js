@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Wrapper, Input, InputsWrapper, Button, FormWrapper } from './components/Styled'
+import { Wrapper, Input, InputsWrapper, Button, FormWrapper, Info } from './components/Styled'
 import axios from 'axios'
 import Mercurias from '../../../assets/mercurias.svg'
 import { injectIntl } from 'react-intl'
@@ -51,22 +51,35 @@ class Contact extends Component {
     return(
       <Wrapper id='contact'>
         <FormWrapper>
-          { this.state.success ? (
-          <div>
-            <div>
-            {this.props.intl.formatMessage({id: 'contact.success'})}
-            </div>
-          </div>  
-          ) : [
           <div
             key='head'
           >
             <h2>{this.props.intl.formatMessage({id: 'contact.title'})}</h2>
+            { !this.state.success && (
+              <div>
+                {this.props.intl.formatMessage({id: 'contact.subtitle'})}:
+              </div>
+            )}
+            <Info>
+              <div>
+                {this.props.intl.formatMessage({id: 'contact.address'})}: <br/>Niceto  Vega  4736, PB. Palermo  Soho . Buenos Aires.
+              </div>
+              <div>
+                {this.props.intl.formatMessage({id: 'contact.cellphone'})} ARG: <br/>+54911 5343 4406
+              </div>
+              <div>
+                {this.props.intl.formatMessage({id: 'contact.cellphone'})} USA: <br/>+1 305 7781955
+              </div>
+            </Info>
+          </div>            
+          {this.state.success ? (
             <div>
-            {this.props.intl.formatMessage({id: 'contact.subtitle'})}:
+              <div>
+              {this.props.intl.formatMessage({id: 'contact.success'})}
+              </div>
             </div>
-          </div>,
-          <InputsWrapper
+          ) : (
+            <InputsWrapper
             key='body'
           >
             <form
@@ -118,8 +131,8 @@ class Contact extends Component {
                 >{this.props.intl.formatMessage({id: 'contact.button'})}</Button>
               </div>
             </form>
-          </InputsWrapper>
-          ]}
+            </InputsWrapper>
+          )}          
         </FormWrapper>
         <div className='mercurias'>
           <div>{this.props.intl.formatMessage({id: 'contact.mercurias'})}</div>          
